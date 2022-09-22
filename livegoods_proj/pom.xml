@@ -13,6 +13,7 @@
         <module>livegoods-pojo</module>
         <module>livegoods-mongodb</module>
         <module>livegoods-banner</module>
+        <module>livegoods-commons</module>
     </modules>
 
     <properties>

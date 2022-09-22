@@ -17,13 +17,26 @@
     </properties>
 
     <dependencies>
+        <!--    eureka dependencies    -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--    mongodb dependencies    -->
         <dependency>
             <groupId>org.abc</groupId>
             <artifactId>livegoods-mongodb</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--    web    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--    commons dependency    -->
+        <dependency>
+            <groupId>org.abc</groupId>
+            <artifactId>livegoods-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

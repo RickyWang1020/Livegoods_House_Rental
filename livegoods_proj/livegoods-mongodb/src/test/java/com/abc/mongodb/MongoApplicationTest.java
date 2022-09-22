@@ -1,6 +1,5 @@
 package com.abc.mongodb;
 
-import com.abc.mongodb.MongoApp;
 import com.abc.pojo.Banner;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,10 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-@SpringBootTest(classes = {MongoApp.class})
+@SpringBootTest(classes = {MongoApplication.class})
+// the filename of yml is not application.yml, so need to configure manually here
 @ActiveProfiles("mongodb")
-public class MongoAppTest {
+public class MongoApplicationTest {
 
     @Autowired
     private MongoTemplate mongoTemplate;

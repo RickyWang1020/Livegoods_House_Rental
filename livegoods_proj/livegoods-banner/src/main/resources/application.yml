@@ -1,0 +1,18 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: livegoods-banner
+  # activate the configurations in application-mongodb.yml and application-commons.yml
+  profiles:
+    active: mongodb, commons
+
+# registration center
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+    client:
+    service-url:
+    defaultZone: http://192.168.56.101:8761/eureka/

@@ -10,6 +10,7 @@
         <module name="livegoods-eureka" />
         <module name="livegoods-pojo" />
         <module name="livegoods-banner" />
+        <module name="livegoods-commons" />
       </profile>
     </annotationProcessing>
   </component>
