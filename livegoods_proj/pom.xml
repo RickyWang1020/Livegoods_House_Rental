@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.abc</groupId>
+    <artifactId>livegoods</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>livegoods-eureka</module>
+        <module>livegoods-pojo</module>
+        <module>livegoods-mongodb</module>
+        <module>livegoods-banner</module>
+    </modules>
+
+    <properties>
+        <spring-boot-version>2.3.0.RELEASE</spring-boot-version>
+        <spring-cloud-version>Hoxton.SR3</spring-cloud-version>
+        <lombok-version>1.18.16</lombok-version>
+        <fastdfs-version>1.27</fastdfs-version>
+        <lcn-version>5.0.2.RELEASE</lcn-version>
+        <commons-lang-version>3.11</commons-lang-version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+    <!-- spring boot -->
+    <dependencyManagement>
+    <dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+    <!-- spring cloud -->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
+    <!-- lombok -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok-version}</version>
+    </dependency>
+    <!-- fastdfs -->
+    <dependency>
+        <groupId>cn.bestwu</groupId>
+        <artifactId>fastdfs-client-java</artifactId>
+        <version>${fastdfs-version}</version>
+    </dependency>
+    <!-- common-lang3 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang-version}</version>
+    </dependency>
+    <!-- txlcn task manager -->
+    <dependency>
+        <groupId>com.codingapi.txlcn</groupId>
+        <artifactId>txlcn-tm</artifactId>
+        <version>${lcn-version}</version>
+    </dependency>
+    <!-- txlcn client -->
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-tc</artifactId>
+            <version>${lcn-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-txmsg-netty</artifactId>
+            <version>${lcn-version}</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>
+
+    <build>
+    <pluginManagement>
+    <plugins>
+    <plugin>
+    <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+            <execution>
+                <id>repackage</id>
+                <goals>
+                    <goal>repackage</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+        <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.34.1</version>
+        </plugin>
+    </plugins>
+    </pluginManagement>
+    </build>
+
+</project>
