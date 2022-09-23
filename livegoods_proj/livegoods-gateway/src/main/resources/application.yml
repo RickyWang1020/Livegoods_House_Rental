@@ -1,0 +1,25 @@
+server:
+  port: 4006
+
+spring:
+  application:
+    name: livegoods-gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: livegoods-banner
+          uri: lb://livegoods-banner
+          predicates:
+            - Path=/banner/**
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # ip:port
+  client:
+    service-url:
+      defaultZone: http://192.168.56.101:8761/eureka/

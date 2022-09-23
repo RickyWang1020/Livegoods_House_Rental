@@ -14,6 +14,7 @@
         <module>livegoods-mongodb</module>
         <module>livegoods-banner</module>
         <module>livegoods-commons</module>
+        <module>livegoods-gateway</module>
     </modules>
 
     <properties>

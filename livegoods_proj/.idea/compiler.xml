@@ -11,6 +11,7 @@
         <module name="livegoods-pojo" />
         <module name="livegoods-banner" />
         <module name="livegoods-commons" />
+        <module name="livegoods-gateway" />
       </profile>
     </annotationProcessing>
   </component>
