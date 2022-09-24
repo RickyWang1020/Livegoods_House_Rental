@@ -1,0 +1,16 @@
+server:
+  port: 7020
+
+spring:
+  application:
+    name: livegoods-product-details
+  profiles:
+    active: mongodb, commons
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://192.168.56.101:8761/eureka/

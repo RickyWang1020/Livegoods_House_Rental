@@ -33,6 +33,11 @@ spring:
             - Query=city
             - Query=content
             - Query=page
+        - id: livegoods-product-details
+          uri: lb://livegoods-product-details
+          predicates:
+            - Path=/details/**
+            - Query=id
 
 eureka:
   instance:

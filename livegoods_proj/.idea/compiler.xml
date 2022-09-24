@@ -13,6 +13,7 @@
         <module name="livegoods-pojo" />
         <module name="livegoods-commons" />
         <module name="livegoods-gateway" />
+        <module name="livegoods-product-details" />
         <module name="livegoods-search" />
         <module name="livegoods-banner" />
       </profile>
