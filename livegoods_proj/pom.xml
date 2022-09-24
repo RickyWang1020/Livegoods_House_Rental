@@ -15,6 +15,7 @@
         <module>livegoods-banner</module>
         <module>livegoods-commons</module>
         <module>livegoods-gateway</module>
+        <module>livegoods-hot-product</module>
     </modules>
 
     <properties>

@@ -21,7 +21,7 @@ public class BannerServiceImpl implements BannerService {
     @Autowired
     private BannerDao bannerDao;
 
-    @Value("${fastdfs.storage.nginx.prefix}")
+    @Value("${fastdfs.storage.nginx.prefix:}")
     private String fastdfsNginxPrefix;
 
     @Override

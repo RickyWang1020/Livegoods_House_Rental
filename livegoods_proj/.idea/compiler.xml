@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="livegoods-mongodb" />
+        <module name="livegoods-hot-product" />
         <module name="livegoods-eureka" />
         <module name="livegoods-pojo" />
-        <module name="livegoods-banner" />
         <module name="livegoods-commons" />
         <module name="livegoods-gateway" />
+        <module name="livegoods-banner" />
       </profile>
     </annotationProcessing>
   </component>
