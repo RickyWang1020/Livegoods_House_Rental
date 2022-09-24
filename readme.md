@@ -4,9 +4,12 @@
 
 ## Tools and Frameworks
 
-- Spring boot
+- Spring Boot
+- Spring Cloud
 - MongoDB
 - Docker
+- Elasticsearch
+- Redis
 - Linux Virtual Machine setup and configuration
 
 ## Folder Structure
@@ -29,20 +32,20 @@
   - node2 (192.168.58.3): FastDFS Storage, Nginx, MongoDB
   - node3 (192.168.56.101): Docker
 - Use FastDFS to upload images that will be used for front-end display
-- Installed and configured `Docker` and `Registry` for deployment of the project as an image
+- Installed and configured `Docker` and `Registry` for the deployment of the project as an image
 
 3. Build the project backend
 
-- First, implement the following services in code:
+- First, implement the following service modules in code:
   - Eureka server
-  - Pojo Object: an object that stores the data information of an image, so that it can
+  - Pojo Object: an object that stores the data information (id, url, time created) of an image, so that it can be passed into other functions
   - MongoDB service
   - Banner service
   - Commons service: use enum class for coding the request result (success, error) to improve readability and decouple the program
 
-- Use ?? to package Docker images and send to the node servers
+- Use `io.fabric8` in Maven to build and package Docker images of the project and send to the node servers
 
-- Build spring cloud gateway service
+- Build spring cloud gateway service by configurations in the gateway module
 
 ### Part 2: Feature of Displaying Hot-selling Products
 
@@ -52,4 +55,8 @@
 
 - Based on the city, pick 4 most hot-selling products. If there is fewer than 4 products, then fill in the slots with products from other cities
 
+2.
+
 ### Part 3: Feature of Hot-selling Products Recommendation
+
+### Part 4: Feature of Searching

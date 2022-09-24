@@ -17,6 +17,7 @@
         <module>livegoods-gateway</module>
         <module>livegoods-hot-product</module>
         <module>livegoods-recommendation</module>
+        <module>livegoods-search</module>
     </modules>
 
     <properties>
