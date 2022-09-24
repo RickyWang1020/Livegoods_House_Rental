@@ -16,6 +16,7 @@
         <module>livegoods-commons</module>
         <module>livegoods-gateway</module>
         <module>livegoods-hot-product</module>
+        <module>livegoods-recommendation</module>
     </modules>
 
     <properties>

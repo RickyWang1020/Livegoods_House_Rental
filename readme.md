@@ -51,3 +51,5 @@
 - Construct Pojo class, add the fields of: sales, city, whether the city should be listed on the hot-selling interface
 
 - Based on the city, pick 4 most hot-selling products. If there is fewer than 4 products, then fill in the slots with products from other cities
+
+### Part 3: Feature of Hot-selling Products Recommendation
