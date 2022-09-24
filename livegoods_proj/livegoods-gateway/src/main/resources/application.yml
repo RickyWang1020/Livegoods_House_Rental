@@ -16,6 +16,12 @@ spring:
           uri: lb://livegoods-banner
           predicates:
             - Path=/banner/**
+        - id: livegoods-hot-product
+          uri: lb://livegoods-hot-product
+          predicates:
+            - Path=/hotProduct/**
+            - Query=city
+
 eureka:
   instance:
     prefer-ip-address: true
