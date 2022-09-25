@@ -38,6 +38,11 @@ spring:
           predicates:
             - Path=/details/**
             - Query=id
+        - id: livegoods-comment
+          uri: lb://livegoods-comment
+          predicates:
+            - Path=/comment/**
+            - Query=id
 
 eureka:
   instance:

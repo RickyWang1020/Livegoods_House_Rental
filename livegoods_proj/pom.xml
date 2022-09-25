@@ -20,6 +20,7 @@
         <module>livegoods-search</module>
         <module>livegoods-product-details</module>
         <module>livegoods-redis</module>
+        <module>livegoods-comment</module>
     </modules>
 
     <properties>

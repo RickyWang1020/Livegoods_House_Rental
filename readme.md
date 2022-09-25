@@ -2,7 +2,7 @@
 
 ## About
 
-This project is an application that utilizes Java microservice development to support the backend of a house rental platform.
+This project is an application that utilizes Java microservice development to support the **backend** of a house rental platform.
 
 This platform features:
 
@@ -15,8 +15,8 @@ This platform features:
 
 - Spring Boot
 - Spring Cloud
-- MongoDB
 - Docker
+- MongoDB
 - Elasticsearch
 - Redis
 - Linux Virtual Machine setup and configuration
@@ -82,3 +82,7 @@ This platform features:
   - When operating JSON with Jackson, if JSON contains some fields that the object class does not have, then deserialization will fail, because of `getHouseTypeForSearch()`. So, need to add `@JsonIgnoreProperties(ignoreUnknown = true)` on the Pojo Item class
 
 ### Part 6: Feature of Enabling User Comments of Houses
+
+- Use `TypedAggregation` and `AggregationResults` to perform aggregration function of "group by" to get the numbers of comments for each house
+
+- To protect user privacy, use regex to hide the middle 4 digits of the user's phone number in the comment page
