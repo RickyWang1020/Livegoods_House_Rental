@@ -2,7 +2,7 @@
 
 ## About
 
-This project is an application that utilizes Java microservice development to support the **backend** of a house rental platform.
+This project is an application that utilizes **Java microservice** development to support the **backend** of a house rental platform.
 
 This platform features:
 
