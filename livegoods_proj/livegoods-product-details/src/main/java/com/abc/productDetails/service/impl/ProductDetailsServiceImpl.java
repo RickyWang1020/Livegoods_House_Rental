@@ -6,6 +6,7 @@ import com.abc.productDetails.dao.ProductDetailsDao;
 import com.abc.productDetails.service.ProductDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.stream.Collectors;
@@ -23,6 +24,7 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
      * @param id
      * @return
      */
+    @Cacheable(cacheNames = "com:abc:productDetails:", key = "'selectItemById('+#id+')'")
     @Override
     public Item selectItemById(String id) {
         Item item = productDetailsDao.selectItemById(id);

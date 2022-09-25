@@ -5,7 +5,7 @@ spring:
   application:
     name: livegoods-search
   profiles:
-    active: mongodb, commons
+    active: mongodb,commons
   elseticsearch:
     rest:
       urls: http://192.168.57.3:9200

@@ -1,16 +1,19 @@
 package com.abc.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode
 @Data
 @NoArgsConstructor
-public class Item {
+public class Item implements Serializable {
 
     private String id;                  // primary key
     private String title;               // title

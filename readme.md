@@ -2,7 +2,14 @@
 
 ## About
 
-This project is an application that utilizes Java microservice development to support the backend of a house rental platform. The platform features displaying and recommending hot-selling products, keyword searching
+This project is an application that utilizes Java microservice development to support the backend of a house rental platform.
+
+This platform features:
+
+- displaying and recommending hot-selling products
+- keyword searching
+- displaying a product's detailed info (cached using Redis)
+- enabling user comments of Houses
 
 ## Tools and Frameworks
 
@@ -69,3 +76,9 @@ This project is an application that utilizes Java microservice development to su
 - Based on the information specified by frontend (in interface documentation), the service should return `Item` type instead of `LivegoodsResult` type
 
 - Because the detailed information of products will not be constantly changing, consider using `Redis` to cache the data
+
+  - Redis cache configuration class is defined as an `abstract class`, otherwise we will need to write "configuration + @Bean" on not only the Redis cache configuration class but also the classes that need caching, and it will not completely work
+
+  - When operating JSON with Jackson, if JSON contains some fields that the object class does not have, then deserialization will fail, because of `getHouseTypeForSearch()`. So, need to add `@JsonIgnoreProperties(ignoreUnknown = true)` on the Pojo Item class
+
+### Part 6: Feature of Enabling User Comments of Houses

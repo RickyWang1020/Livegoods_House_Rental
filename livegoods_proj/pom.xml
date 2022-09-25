@@ -19,6 +19,7 @@
         <module>livegoods-recommendation</module>
         <module>livegoods-search</module>
         <module>livegoods-product-details</module>
+        <module>livegoods-redis</module>
     </modules>
 
     <properties>

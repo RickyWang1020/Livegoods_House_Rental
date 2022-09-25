@@ -6,7 +6,7 @@ spring:
     name: livegoods-banner
   # activate the configurations in application-mongodb.yml and application-commons.yml
   profiles:
-    active: mongodb, commons
+    active: mongodb,commons
 
 # registration center
 eureka:

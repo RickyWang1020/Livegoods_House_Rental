@@ -5,7 +5,7 @@ spring:
   application:
     name: livegoods-product-details
   profiles:
-    active: mongodb, commons
+    active: mongodb,commons,redis
 
 eureka:
   instance:
